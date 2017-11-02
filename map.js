@@ -1,16 +1,24 @@
-// var words = ["ground", "control", "to", "major", "tom"];
+function map (array, callBack) {
+  var newArray = [];
+  for (var item in array) {
+    newArray.push(callBack(array[item]));
+  }
+  return newArray;
+}
 
-// map(words, function(word) {
-//   return word.length;
-// });
+var words = ["ground", "control", "to", "major", "tom"];
 
-// map(words, function(word) {
-//   return word.toUpperCase();
-// });
+map(words, function(word) {
+  return word.length;
+});
 
-// map(words, function(word) {
-//   return word.split('').reverse().join('');
-// });
+map(words, function(word) {
+  return word.toUpperCase();
+});
+
+map(words, function(word) {
+  return word.split('').reverse().join('');
+});
 
 
 // Expected results
